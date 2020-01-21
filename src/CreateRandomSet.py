@@ -4,7 +4,7 @@
 '''
 **********************************************************
 * CreateRandomSet
-* 20200115a
+* 20200121a
 * By: Nicola Ferralis <feranick@hotmail.com>
 ***********************************************************
 '''
@@ -27,7 +27,7 @@ def main():
     saved_roster = "roster"+str(datetime.now().strftime('_%Y-%m-%d_%H-%M-%S.csv'))
 
     for i in range(int(sys.argv[1])):
-        kid = [i]
+        kid = [i+1]
         for j in range(len(prob_q)):
             kid = np.hstack((kid, np.random.choice(np.arange(0,2),p=[prob_q[j],1-prob_q[j]])))
         try:
