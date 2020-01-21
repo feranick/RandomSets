@@ -35,9 +35,9 @@ def main():
         except:
             kids = kid
     
-    print("Roster:\n", kids)
+    print("Roster:\n", kids.T)
     with open(saved_roster, "a") as file:
-        np.savetxt(file, kids, delimiter=',', fmt='%i')
+        np.savetxt(file, kids.T, delimiter=',', fmt='%i')
     print("\nRoster saved in:", saved_roster)
     
     
