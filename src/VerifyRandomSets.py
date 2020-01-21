@@ -3,7 +3,7 @@
 '''
 **********************************************************
 * VerifyRandomSets
-* 20200115a
+* 20200121a
 * By: Nicola Ferralis <feranick@hotmail.com>
 ***********************************************************
 '''
@@ -17,8 +17,8 @@ def main():
         print("usage: VerifyRandomSets roster_2020-01-15_15-49-14.csv")
         return
     else:
-        kids = np.genfromtxt(sys.argv[1], delimiter=',')
-    
+        kids = np.genfromtxt(sys.argv[1], delimiter=',').T
+
     print("Roster:\n", kids)
 
     print("\n Input criteria for selection in the format:",repr(np.ones((kids.shape[1]-1), dtype=int).tolist()))
