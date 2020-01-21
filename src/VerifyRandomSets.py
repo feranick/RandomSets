@@ -28,7 +28,8 @@ def main():
         try:
             sel_criteria = ast.literal_eval(input('\nCriteria: '))
             if sel_criteria == 0:
-                break
+                return
+            print("\nNumber of criteria (students):",len(sel_criteria),"(",kids.shape[1]-1,")")
             selected = kids
             for k in range(kids.shape[1]-1):
                 if sel_criteria[k] < 2:
